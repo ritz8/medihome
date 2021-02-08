@@ -1,0 +1,242 @@
+
+  <!DOCTYPE html> 
+  <html lang="en">
+    
+  <!-- Mirrored from dreamguys.co.in/demo/doccure/template/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 23 Apr 2020 08:29:05 GMT -->
+  <head>
+      <meta charset="utf-8">
+      <title>Doccure</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+      
+      <!-- Favicons -->
+      <link href="/assets/img/favicon.png" rel="icon">
+      
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+      
+      <!-- Fontawesome CSS -->
+      <link rel="stylesheet" href="/assets/plugins/fontawesome/css/fontawesome.min.css">
+      <link rel="stylesheet" href="/assets/plugins/fontawesome/css/all.min.css">
+      
+      <!-- Main CSS -->
+      <link rel="stylesheet" href="/assets/css/style.css">
+    
+    </head>
+    <body>
+  
+      <!-- Main Wrapper -->
+      <div class="main-wrapper">
+      
+        <!-- Header -->
+        <app-header></app-header>
+        <!-- /Header -->
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb-bar">
+          <div class="container-fluid">
+            <div class="row align-items-center">
+              <div class="col-md-12 col-12">
+                <nav aria-label="breadcrumb" class="page-breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Payment Page</li>
+                  </ol>
+                </nav>
+                <h2 class="breadcrumb-title">Payment</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Breadcrumb -->
+        
+        <!-- Page Content -->
+        <div class="content">
+          <div class="container">
+  
+            <div class="row">
+              <div class="col-md-7 col-lg-8">
+                <div class="card">
+                  <div class="card-body">
+                  
+                    <!-- Checkout Form -->
+                    <form action="https://dreamguys.co.in/demo/doccure/template/booking-success.html">
+                    
+                      <!-- Personal Information -->
+                      <div class="info-widget">
+                        <h4 class="card-title">Personal Information</h4>
+                        <div class="row">
+                          <div class="col-md-6 col-sm-12">
+                            <div class="form-group card-label">
+                              <label>First Name</label>
+                              <input class="form-control" type="text" name="fn" [(ngModel)]="obj1.F_Name">
+                            </div>
+                          </div>
+                          <div class="col-md-6 col-sm-12">
+                            <div class="form-group card-label">
+                              <label>Last Name</label>
+                              <input class="form-control" type="text" name="ln" [(ngModel)]="obj1.L_Name">
+                            </div>
+                          </div>
+                          <div class="col-md-6 col-sm-12">
+                            <div class="form-group card-label">
+                              <label>Email</label>
+                              <input class="form-control" type="email" name="em" [(ngModel)]="obj1.Email">
+                            </div>
+                          </div>
+                          <div class="col-md-6 col-sm-12">
+                            <div class="form-group card-label">
+                              <label>Phone</label>
+                              <input class="form-control" type="text" name="ph" [(ngModel)]="obj1.Phone">
+                            </div>
+                          </div>
+                        </div>
+                       
+                      </div>
+                      <!-- /Personal Information -->
+                      
+                      <div class="payment-widget">
+                        <h4 class="card-title">Payment Method</h4>
+                        
+                        <!-- Payment -->
+                        <div class="payment-list">
+                          
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group card-label">
+                                <label for="card_name">Name on Card</label>
+                                <input class="form-control" id="card_name" type="text">
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group card-label">
+                                <label for="card_number">Card Number</label>
+                                <input class="form-control" id="card_number" placeholder="1234  5678  9876  5432" type="text">
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="form-group card-label">
+                                <label for="expiry_month">Expiry Month</label>
+                                <input class="form-control" id="expiry_month" placeholder="MM" type="text">
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="form-group card-label">
+                                <label for="expiry_year">Expiry Year</label>
+                                <input class="form-control" id="expiry_year" placeholder="YY" type="text">
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="form-group card-label">
+                                <label for="cvv">CVV</label>
+                                <input class="form-control" id="cvv" type="text">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- /Payment -->
+                                            
+                        <!-- Submit Section -->
+                        <div class="submit-section mt-4">
+                          <button type="submit" (click)="confirmPayment()" class="btn btn-primary submit-btn">Confirm and Pay</button>
+                        </div>
+                        <!-- /Submit Section -->
+                        
+                      </div>
+                    </form>
+                    <!-- /Checkout Form -->
+                    
+                  </div>
+                </div>
+                
+              </div>
+              
+              <div class="col-md-5 col-lg-4 theiaStickySidebar">
+              
+                <!-- Booking Summary -->
+                <div class="card booking-card">
+                  <div class="card-header">
+                    <h4 class="card-title">Booking Summary</h4>
+                  </div>
+                  <div class="card-body">
+                  
+                    <!-- Booking Doctor Info -->
+                    <div class="booking-doc-info">
+                      <a href="doctor-profile.html" class="booking-doc-img">
+                        <img src="assets/img/doctors/doc_clipart.jpg" alt="User Image">
+                      </a>
+                      <div class="booking-info">
+                        <h4><a href="doctor-profile.html">{{idoc.Doc_name}}</a></h4>
+                        <div class="rating">
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star"></i>
+                          <span class="d-inline-block average-rating">{{idoc.Experience}}</span>
+                        </div>
+                        <div class="clinic-details">
+                          <p class="doc-location"><i class="fas fa-map-marker-alt"></i> {{idoc.Location}}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Booking Doctor Info -->
+                    
+                    <div class="booking-summary">
+                      <div class="booking-item-wrap">
+                        <ul class="booking-date">
+                          <li>Appointment Date <span>{{ idoc.appointDate }}</span></li>
+                        </ul>
+                        <ul class="booking-fee">
+                          <li>Consulting Fee <span>Rs 500</span></li>
+                          <li>Booking Fee <span>Rs 100</span></li>
+                        </ul>
+                        <div class="booking-total">
+                          <ul class="booking-total-list">
+                            <li>
+                              <span>Total</span>
+                              <span class="total-cost">Rs 600</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Booking Summary -->
+                
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>		
+        <!-- /Page Content -->
+     
+
+      <!-- Footer -->
+			  <app-footer></app-footer>
+			<!-- /Footer -->
+		   
+      </div>
+      <!-- /Main Wrapper -->
+      
+      <!-- jQuery -->
+      <script src="/assets/js/jquery.min.js"></script>
+      
+      <!-- Bootstrap Core JS -->
+      <script src="/assets/js/popper.min.js"></script>
+      <script src="/assets/js/bootstrap.min.js"></script>
+      
+      <!-- Sticky Sidebar JS -->
+          <script src="/assets/plugins/theia-sticky-sidebar/ResizeSensor.js"></script>
+          <script src="/assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js"></script>
+      
+      <!-- Custom JS -->
+      <script src="/assets/js/script.js"></script>
+      
+    </body>
+  
+  <!-- Mirrored from dreamguys.co.in/demo/doccure/template/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 23 Apr 2020 08:29:05 GMT -->
+  </html>
+
+  

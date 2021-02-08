@@ -1,0 +1,17 @@
+table, tr , td, thead,th {
+    border: 2px solid rgb(128, 128, 128);
+    border-collapse: collapse;
+    padding: 10px;
+    }
+    table tr:nth-child(odd) {
+    background-color: #d6f3f8;
+    }
+    table tr:nth-child(even) {
+    background-color: #d6f3f8;
+    } 
+
+    table {
+      align-content: center;
+        width: 80%;
+        height: 80%;
+      }
